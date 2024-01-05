@@ -4,9 +4,11 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
+/* @import url('./reset.css');
 @import url('./vite-promo.css');
-@import url('./header.css');
+@import url('./header.css'); */
+/* @import url(`flatpickr/dist/flatpickr.min.css`);
+@import url(`izitoast/dist/css/iziToast.min.css`); */
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +24,79 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin-left: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.home {
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 272px;
+  height: 40px;
+  padding-left: 16px;
+  border-radius: 4px;
+  color: #808080;
+  background-color: #FFF;
+  border: 1px solid #808080;
+}
+
+.input:disabled {
+  border: 1px solid #808080;
+  background-color: #FAFAFA;
+}
+
+.input:focus,
+.input:hover {
+  border: 1px solid #000;
+}
+
+.button {
+  width: 75px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #4E75FF;
+}
+
+.button:disabled {
+  color: #989898;
+  background-color: #CFCFCF;
+}
+
+.button:focus,
+.button:hover {
+  color: #FFFFFF;
+  background-color: #6C8CFF;
+}
+
+.timer {
+  width: 216px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 24px;
+  align-self: center;
+}
+
+.label {
+  font-size: 10px;
+  text-transform: uppercase;
+  align-self: center;
 }
