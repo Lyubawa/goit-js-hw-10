@@ -35,12 +35,14 @@ const options = {
   },
 };
 
-flatpickr('#datetime-picker', options);
+const datePicker = flatpickr('#datetime-picker', options);
+
+let intervalId;
 
 btnElem.addEventListener('click', startTimer);
 
 function startTimer() {
-  const selectedDate = flatpickr.parseDate(document.getElementById('datetime-picker').value);
+  const selectedDate = datePicker.selectedDates[0];
   const currentDate = new Date();
 
   if (selectedDate <= currentDate) {
@@ -57,7 +59,7 @@ function startTimer() {
   }
 
   btnElem.disabled = true;
-  const intervalId = setInterval(updateTimer, 1000, selectedDate);
+  intervalId = setInterval(updateTimer, 1000, selectedDate);
 }
 
 function updateTimer(selectedDate, intervalId) {
